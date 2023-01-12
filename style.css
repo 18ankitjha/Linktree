@@ -68,6 +68,7 @@ section {
 .content {
   display: flex;
   flex-direction: column;
+  gap: 2rem;
 }
 .image{
   height:30vh;
@@ -75,23 +76,47 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
+
 .image img{
   
+  box-shadow:0px 0px 50px 30px #070a6c ;
   height:100%;
   /* margin-top: 5px; */
   object-fit: cover;
   object-position: center;
   border-radius: 50%;
+  animation: box-shadow 4s cubic-bezier(0.60,1,0.70,0) 0s 2 normal;
+  transition: all 0.5s ease-in-out;
+  border: 5px solid white;
 }
+.image img:hover{
+    transform: scale(1.05,1.05);
+    box-shadow: blue;
+}
+@keyframes box-shadow {
+  from {
+    box-shadow: 0px 0px 0px 0px #070a6c;
+  }
+
+  to {
+    box-shadow: 0px 0px 50px 30px #070a6c;
+  }
+}
+  
 .description{
-  margin-top:4rem ;
+  /* box-shadow: 0px 0px 50px 30px #070a6c; */
+  margin-top:6rem ;
   color:white;
   text-align: center;
   width:50%;
   margin:5px auto;
+  font-size: 1.1rem;
   /* font-family: 'Noto Serif Toto', serif; */
 }
+
+
 .social_link{
   display: flex;
   justify-content: center;
